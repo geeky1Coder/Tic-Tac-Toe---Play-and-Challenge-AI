@@ -1,0 +1,114 @@
+/* Overlay that covers the whole screen */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Subtle dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it appears above other content */
+    backdrop-filter: blur(10px); /* Blurs the background for a modern effect */
+  }
+  
+  /* Professional, minimalistic modal content */
+  .popup-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%;
+    max-width: 600px;
+    position: relative;
+    z-index: 10000; /* Ensures the modal content is above the confetti */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .modal-header {
+    margin-bottom: 20px;
+  }
+  
+  .popup-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase; /* Modern uppercase header */
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .popup-content .modal-message {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .popup-content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #6c757d; /* Subtle gray button */
+    border: none;
+    font-size: 20px; /* Slightly smaller font size for a minimalist look */
+    font-weight: 600; /* Medium weight for clarity */
+    color: white;
+    padding: 8px 12px; /* Adjusted padding for a more rectangular shape */
+    border-radius: 6px; /* Slightly rounded corners for a modern, squared look */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .popup-content button:hover {
+    background-color: #495057; /* Darker gray for hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .popup-content button:active {
+    background-color: #343a40; /* Even darker gray for active state */
+    transform: scale(1); /* Remove zoom effect on click */
+  }
+  
+  .popup-content button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.3); /* Subtle focus ring for accessibility */
+  }
+  
+  
+  /* Modal for mobile */
+  @media (max-width: 600px) {
+    .popup-content {
+      width: 90%;
+    }
+  
+    .popup-content h2 {
+      font-size: 20px;
+    }
+  
+    .popup-content .modal-message {
+      font-size: 16px;
+    }
+
+    
+  .popup-content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #6c757d; /* Subtle gray button */
+    border: none;
+    font-size: 10px; /* Slightly smaller font size for a minimalist look */
+    font-weight: 600; /* Medium weight for clarity */
+    color: white;
+    padding: 8px 12px; /* Adjusted padding for a more rectangular shape */
+    border-radius: 6px; /* Slightly rounded corners for a modern, squared look */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  }
+  
